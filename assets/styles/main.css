@@ -55,6 +55,7 @@ main {
 .result-card {
    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   z-index: 100;
 }
 @media screen and (max-width: 560px) {
    .result-card {
@@ -80,6 +81,8 @@ main {
    color: hsl(241, 100%, 89%);
    font-weight: 500;
    margin: auto;
+   /* margin-top: 70px; */
+   line-height: 22px;
    max-width: 210px;
 }
 @media screen and (max-width: 560px) {
@@ -88,17 +91,21 @@ main {
    }
 }
 .result-card .result-card__total {
-   width: 170px;
-   height: 170px;
+   width: 200px;
+   height: 200px;
    border-radius: 50%;
    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   margin: auto;
-   margin-top: 25px;
-   margin-bottom: 25px;
+   margin: 50px auto;
+}
+@media screen and (max-width: 560px) {
+   .result-card .result-card__total {
+      width: 170px;
+      height: 170px;
+   }
 }
 .result-card .result-card__total > .result-card__score {
    font-size: 60px;
@@ -118,6 +125,18 @@ main {
       box-shadow: none;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+   }
+}
+@media screen and (min-width: 560px) {
+   .summary-card {
+      margin-left: -45px;
+      padding-left: 85px;
+   }
+}
+@media screen and (min-width: 560px) and (max-width: 650px) {
+   .summary-card {
+      margin-left: -45px;
+      padding-left: 65px;
    }
 }
 .summary-card > .summary-card__title {
